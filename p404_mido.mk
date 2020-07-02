@@ -21,19 +21,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from mido device
 $(call inherit-product, device/xiaomi/mido/device.mk)
 
-# Inherit some common Ancient ROM stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
-
-# Gapps
-TARGET_GAPPS_ARCH := arm64
-IS_PHONE := true
-
-# Bootanimation Resolution
-TARGET_BOOT_ANIMATION_RES := 1080
+# Inherit 404 common stuff.
+$(call inherit-product, vendor/404/configs/common.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := mido
-PRODUCT_NAME := aosp_mido
+PRODUCT_NAME := p404_mido
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 4X
 PRODUCT_MANUFACTURER := Xiaomi
